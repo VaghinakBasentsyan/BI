@@ -1,0 +1,53 @@
+Below are the variables, make sure you use the monthly and non-seasonally adjusted.
+
+Leading variables
+
+1.   Average weekly hours (manufacturing) — Adjustments to the working hours of existing employees are usually made in advance of new hires or layoffs, which is why the measure of average weekly hours is a leading indicator for changes in unemployment.
+
+2.   Average weekly jobless claims for unemployment insurance — The CB reverses the value of this component from positive to negative because a positive reading indicates a loss in jobs. The initial jobless-claims data is more sensitive to business conditions than other measures of unemployment, and as such leads the monthly unemployment data released by the U.S. Department of Labor.
+
+3.   Manufacturers' new orders for consumer goods/materials — This component is considered a leading indicator because increases in new orders for consumer goods and materials usually mean positive changes in actual production. The new orders decrease inventory and contribute to unfilled orders, a precursor to future revenue.
+
+4.   Vendor performance (slower deliveries diffusion index) — This component measures the time it takes to deliver orders to industrial companies. Vendor performance leads the business cycle because an increase in delivery time can indicate rising demand for manufacturing supplies. Vendor performance is measured by a monthly survey from the National Association of Purchasing Managers (NAPM). This diffusion index measures one-half of the respondents reporting no change and all respondents reporting slower deliveries.
+
+5.   Manufacturers' new orders for non-defense capital goods — As stated above, new orders lead the business cycle because increases in orders usually mean positive changes in actual production and perhaps rising demand. This measure is the producer's counterpart of new orders for consumer goods/materials component (#3).
+
+6.   Building permits for new private housing units.
+
+7.   Stock price returns of 500 common stocks — Equity market returns are considered a leading indicator because changes in stock prices reflect investors' expectations for the future of the economy and interest rates.
+
+8.   Money Supply (M2) — The money supply measures demand deposits, traveler's checks, savings deposits, currency, money market accounts, and small-denomination time deposits. Here, M2 is adjusted for inflation by means of the deflator published by the federal government in the GDP report. Bank lending, a factor contributing to account deposits, usually declines when inflation increases faster than the money supply, which can make economic expansion more difficult. Thus, an increase in demand deposits will indicate expectations that inflation will rise, resulting in a decrease in bank lending and an increase in savings.
+
+9.   Interest rate spread (10-year Treasury vs. Federal Funds target) — The interest rate spread is often referred to as the yield curve and implies the expected direction of short-, medium- and long-term interest rates. Changes in the yield curve have been the most accurate predictors of downturns in the economic cycle. This is particularly true when the curve becomes inverted, that is, when the longer-term returns are expected to be less than the short rates.
+
+10. Index of consumer expectations — This is the only component of the leading indicators that is based solely on expectations. This component leads the business cycle because consumer expectations can indicate future consumer spending or tightening. The data for this component comes from the University of Michigan's Survey Research Center, and is released once a month.
+
+
+
+Lagging variables
+
+·         The average duration of unemployment (inverted)
+
+·         The value of outstanding commercial and industrial loans
+
+·         The change in the Consumer Price Index for services
+
+·         The change in labour cost per unit of output
+
+·         The ratio of manufacturing and trade inventories to sales
+
+·         The ratio of consumer credit outstanding to personal income
+
+·         The average prime rate charged by banks
+
+
+
+Coincident variables
+
+·         Number of employees on non-agricultural payrolls
+
+·         Personal income less transfer payments
+
+·         Industrial production
+
+·         Manufacturing and trade sale
