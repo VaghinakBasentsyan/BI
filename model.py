@@ -20,13 +20,12 @@ target.replace([np.inf, -np.inf], np.nan)
 monthly_data.fillna(0)
 target.fillna(0)
 
-monthly_data.rename( columns={'Unnamed: 0': 'date'}, inplace=True )
-target.rename( columns={'Unnamed: 0': 'date'}, inplace=True )
 
-monthly_data['date'] = pd.to_datetime(monthly_data['date'])
-monthly_data['date'] = (monthly_data['date'] - monthly_data['date'].min()) / np.timedelta64(1,'D')
-target['date'] = pd.to_datetime(target['date'])
-target['date'] = (target['date'] - target['date'].min()) / np.timedelta64(1,'D')
+
+# monthly_data['date'] = pd.to_datetime(monthly_data['date'])
+# monthly_data['date'] = (monthly_data['date'] - monthly_data['date'].min()) / np.timedelta64(1,'D')
+# target['date'] = pd.to_datetime(target['date'])
+# target['date'] = (target['date'] - target['date'].min()) / np.timedelta64(1,'D')
 
 
 if __name__ == "__main__":

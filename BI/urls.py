@@ -17,14 +17,19 @@ from django.conf.urls import url, include
 from django.contrib import admin
 from rest_framework import routers
 
-from apps.dashboard.views import ReportViewSet
 from apps.core.urls import generate_url
 
 router = routers.DefaultRouter()
-router.register(r'report', ReportViewSet)
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
+    generate_url(
+        r"dashboard/",
+        include("apps.dashboard.urls", namespace="dashboard-api"),
+        name="dashboard",
+    ),
     generate_url("", include(router.urls))
 ]
+
+
 
