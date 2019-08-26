@@ -13,13 +13,9 @@ class ReportViewSet(APIView):
     serializer_class = ReportSerializer
 
     def get(self, request, format=None):
-        print(Report.objects.all())
         report = Report.objects.latest(field_name='id')
-        df = pd.read_csv(report.file_path, index_col=['date', 'recession'])
-        print(df.columns)
-        print(report.file_path)
-        columnsData = df
-        # df = p
-
+        df = pd.read_csv(report.file_path)
+        df = df[['date', 'recession']]
+        return Response(df.to_json(orient='records'))
         # collect_data()
-        return Response(df.to_json())
+        # return Response()
