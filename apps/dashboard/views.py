@@ -15,9 +15,10 @@ class ReportViewSet(APIView):
     def get(self, request, format=None):
         print(Report.objects.all())
         report = Report.objects.latest(field_name='id')
-a        df = pd.read_csv(report.file_path)
-
-        columnsData = df.loc[:, ['date', 'recession']]
+        df = pd.read_csv(report.file_path, index_col=['date', 'recession'])
+        print(df.columns)
+        print(report.file_path)
+        columnsData = df
         # df = p
 
         # collect_data()
