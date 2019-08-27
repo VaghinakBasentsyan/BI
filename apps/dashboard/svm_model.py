@@ -3,7 +3,6 @@ import pandas as pd
 import datetime
 import numpy as np
 from sklearn.model_selection import train_test_split
-from sklearn.metrics import accuracy_score
 from statsmodels.tsa.vector_ar.var_model import VAR
 
 
@@ -50,7 +49,6 @@ def add_predict(df):
     yhat = list(yhat[0])
     yhat.insert(
         0,
-
         (
                 pd.DataFrame({'time': [pd.to_datetime(datetime.datetime.today().strftime('%Y-%m-%d'))]}).astype(int)
                 / 10**9

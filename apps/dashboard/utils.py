@@ -13,16 +13,30 @@ from .svm_model import add_predict
 fred = fredapi.Fred(api_key='14d8dd169b3688444536eadb2edf0896')
 
 good_columns = [
-    u'AWHAETP',
-    u'ACDGNO',
-    u'M06006USM156NNBR',
-    u'NEWORDER',
-    u'PERMIT',
-    u'SP500',
-    u'M2',
-    u'UEMPMEAN',
-    # u'T10YFF',
-    # u'BUSLOANS'
+    u'AWHAETP',         #1 Average weekly hours
+                        #2 Average weekly jobless claims for unemployment insurance
+    u'ACDGNO',          #3 Manufacturers' new orders for consumer goods/materials
+    u'M06006USM156NNBR',#4 Vendor performance (slower deliveries diffusion index)
+    u'NEWORDER',        #5 Manufacturers' new orders for non-defense
+    u'PERMIT',          #6 Building permits
+    u'SP500',           #7 Stock price returns of 500 common stocks
+    u'M2',              #8 Money Supply (M2)
+    u'T10YFF',          #9 Interest rate spread
+                        #10 Index of consumer expectations
+
+                        #Lagging variables
+    u'UEMPMEAN',        #1 The average duration of unemployment (inverted)
+    u'BUSLOANS',        #2 The value of outstanding commercial and industrial loans
+                        #3 The change in labour cost per unit of output
+    u'MNFCTRIRSA',      #4 The ratio of manufacturing and trade inventories to sales
+                        #5 The ratio of consumer credit outstanding to personal income
+                        #6 The average prime rate charged by banks
+
+                        #Coincident variables
+                        #1 Number of employees on non-agricultural payrolls
+    u'PI'               #2 Personal income less transfer payments
+    u'INDPRO'           #3 Industrial production
+    u'M0602AUSM144SNBR' #4 Manufacturing and trade sale
     ]
 
 
