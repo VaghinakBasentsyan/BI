@@ -1,5 +1,5 @@
 # BI
-![alt text](https://fred.stlouisfed.org/images/fred-masthead-research-2x.png)
+![alt text](https://www.stlouisfed.org/~/media/publications/regional-economist/2018/second_quarter_2018/fred_monitorsm.jpg)
 <h2>Django Service for Forecasting America's Economic Recession.</h2>
 
 <p>The service 
