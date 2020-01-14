@@ -55,9 +55,10 @@ def add_predict(df):
         ).values[0][0]
     )
 
-    print(yhat)
     prediction = clf.predict([yhat])[0]
     yhat[0] = datetime.datetime.today().strftime('%Y-%m-%d')
     yhat.insert(0, prediction)
-    return df.append(pd.Series(yhat, index=all_frame.columns), ignore_index=True)
+    df.append(pd.Series(yhat, index=all_frame.columns), ignore_index=True)
+    # df['date'] = pd.to_datetime(df['date']).astype(int) / 10 ** 9
+    return df
 

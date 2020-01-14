@@ -23,13 +23,11 @@ router = routers.DefaultRouter()
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    generate_url(
-        r"dashboard/",
+    generate_url("",
         include("apps.dashboard.urls", namespace="dashboard-api"),
         name="dashboard",
     ),
     generate_url("", include(router.urls))
 ]
-
 
 

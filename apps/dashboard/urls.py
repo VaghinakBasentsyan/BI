@@ -9,5 +9,6 @@ from .views import (
 app_name = "Dashboard"
 
 urlpatterns = [
+    url(r"", ReportViewSet.as_view(), name="report"),
     url(r"^report/?", ReportViewSet.as_view(), name="report"),
 ]

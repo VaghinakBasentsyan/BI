@@ -1,0 +1,12 @@
+echo "Docker container has been started"
+
+declare -p | grep -Ev 'BASHOPTS|BASH_VERSINFO|EUID|PPID|SHELLOPTS|UID' > /container.env
+
+# Setup a cron schedule
+echo "SHELL=/bin/bash
+BASH_ENV=/container.env
+* * * * * python /bi_service/manage.py collect_data
+#" > scheduler.txt
+
+crontab scheduler.txt
+cron -f
