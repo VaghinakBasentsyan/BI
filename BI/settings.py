@@ -121,4 +121,4 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
-API_VERSION_URL = "api/v0/"
+API_VERSION_URL = ""
