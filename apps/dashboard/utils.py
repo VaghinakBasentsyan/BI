@@ -58,9 +58,12 @@ def collect_fred_data():
             warnings.warn('Series {} not found on FRED API'.format(series_id))
     obs = {}
     for series_id in metadata.keys():
-        good_columns.remove(series_id)
-        series_data = get_series_data(series_id)
-        obs[series_id] = series_data
+        try:
+            good_columns.remove(series_id)
+            series_data = get_series_data(series_id)
+            obs[series_id] = series_data
+        except Exception:
+            pass
 
     monthly = [series_id for series_id
                in metadata
