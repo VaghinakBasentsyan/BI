@@ -55,10 +55,10 @@ def add_predict(df):
         ).values[0][0]
     )
 
-    prediction = clf.predict([yhat])[0]
+    prediction = clf.predict_proba([yhat])[0][1]
     yhat[0] = datetime.datetime.today().strftime('%Y-%m-%d')
     yhat.insert(0, prediction)
-    df.append(pd.Series(yhat, index=all_frame.columns), ignore_index=True)
-    # df['date'] = pd.to_datetime(df['date']).astype(int) / 10 ** 9
+    df['recession'] = pd.to_numeric(df['recession'])
+    df = df.append(pd.Series(yhat, index=all_frame.columns), ignore_index=True)
     return df
 

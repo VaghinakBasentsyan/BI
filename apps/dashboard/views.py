@@ -23,7 +23,6 @@ class ReportViewSet(APIView):
         elem = {}
         index = 0
         for arr in date_rec:
-
             if arr[1] and not elem:
                 elem['start'] = datetime.strptime(arr[0], "%Y-%m-%d").timestamp()
                 elem['start_date'] = arr[0]

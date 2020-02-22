@@ -32,10 +32,9 @@ good_columns = [
     u'PAYNSA',          #6 The average prime rate charged by banks
 
                         #Coincident variables
-                        #1 Number of employees on non-agricultural payrolls
-    u'PI',              #2 Personal income less transfer payments
-    u'INDPRO',          #3 Industrial production
-    u'M0602AUSM144SNBR' #4 Manufacturing and trade sale
+    u'PI',              #1 Personal income less transfer payments
+    u'INDPRO',          #2 Industrial production
+    u'M0602AUSM144SNBR' #3 Manufacturing and trade sale
     ]
 
 
@@ -77,7 +76,6 @@ def collect_fred_data():
     monthly_data = monthly_data[monthly_data.index <
                                 (datetime.datetime.today() - datetime.timedelta(days = 1)).strftime('%Y-%m-%d')]
 
-    monthly_data.to_csv('fin_data.csv')
     usrec = fred.get_series_first_release('USREC')
     usrec.index = [ix.isoformat().split('T')[0] for ix in usrec.index]
     bool_match = usrec.index > monthly_data.first_valid_index()
@@ -100,7 +98,7 @@ def collect_fred_data():
     all_data = pd.merge(target_frame, monthly_data, on=['date'])
     final_df = add_predict(all_data)
 
-    file_name = "{}financials-{}.csv".format(
+    file_name = "financials.csv".format(
         settings.MEDIA_ROOT,
         format(datetime.datetime.today().strftime('%Y-%m-%d'))
     )
