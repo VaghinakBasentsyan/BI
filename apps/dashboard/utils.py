@@ -3,7 +3,6 @@ import datetime
 import fredapi
 import pandas as pd
 from django.conf import settings
-from datetime import datetime
 from django.conf import settings
 
 from .models import Report
@@ -73,7 +72,7 @@ def collect_fred_data():
     monthly_data = all_monthly
 
     monthly_data = monthly_data[monthly_data.index <
-                        datetime.today().strftime('%Y-%m-%d')]
+                                (datetime.datetime.today() - datetime.timedelta(days = 1)).strftime('%Y-%m-%d')]
 
     monthly_data.to_csv('fin_data.csv')
     usrec = fred.get_series_first_release('USREC')
@@ -100,7 +99,7 @@ def collect_fred_data():
 
     file_name = "{}financials-{}.csv".format(
         settings.MEDIA_ROOT,
-        format(datetime.today().strftime('%Y-%m-%d'))
+        format(datetime.datetime.today().strftime('%Y-%m-%d'))
     )
     final_df.to_csv(file_name)
 
