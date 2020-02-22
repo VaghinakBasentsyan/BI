@@ -19,7 +19,7 @@ class ReportViewSet(APIView):
         data = {}
         data['recession_data'] = []
         date_rec = df[['date', 'recession']].values
-        data['observations'] = [[datetime.strptime(date[0], '%Y-%m-%d'), date[1]] for date in date_rec]
+        data['observations'] = [[datetime.strptime(date[0], '%Y-%m-%d').timestamp(), date[1]] for date in date_rec]
         elem = {}
         index = 0
         for arr in date_rec:
