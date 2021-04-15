@@ -1,6 +1,6 @@
 cycler==0.10.0
 Cython==0.29.13
-Django==2.2.4
+Django==2.2.20
 django-env==0.2.1
 djangorestframework==3.10.2
 fredapi==0.4.2
